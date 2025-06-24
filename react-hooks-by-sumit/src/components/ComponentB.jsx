@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { counterContext } from '../App';
+import { counterContext } from '../App-alt';
 
 const ComponentB = () => {
   const countContext = useContext(counterContext);
@@ -12,13 +12,17 @@ const ComponentB = () => {
         onClick={() =>
           countContext.countDispatch('increment')
         }
-      ></button>
+      >
+        Increment
+      </button>
       <button
         type="button"
         onClick={() =>
           countContext.countDispatch('decrement')
         }
-      ></button>
+      >
+        Decrement
+      </button>
     </div>
   );
 };
